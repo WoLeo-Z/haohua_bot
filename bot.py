@@ -83,7 +83,7 @@ def question_inline(update: Update, context: CallbackContext):
             title='来说好话咯！',
             description=text,
             input_message_content=InputTextMessageContent(text),
-            thumb_url=f'{asset_url}/shuibiao.jpg'
+            thumb_url=f'{asset_url}/haohua.png'
         )
         for text in random.sample(questions_list, 3)
     ]
@@ -93,7 +93,7 @@ def question_inline(update: Update, context: CallbackContext):
             title='说好话统计',
             description='据不完全统计，目前全网累计说好话次数……',
             input_message_content=InputTextMessageContent(get_stats()),
-            thumb_url=f'{asset_url}/icon.jpg'
+            thumb_url=f'{asset_url}/haohua.png'
         )
     )
     update.inline_query.answer(query_result, cache_time=0)
