@@ -15,12 +15,12 @@ from telegram.ext import Updater, CommandHandler, \
     InlineQueryHandler, ChosenInlineResultHandler, \
     PicklePersistence
 
-token = os.getenv('TELEGRAM_APITOKEN')
+token = "YOUR_TOKEN_HERE"
 asset_url = os.getenv('ASSET_URL', 'https://raw.githubusercontent.com/woleo-z/wolsay_bot/master/asset')
 data_path = os.getenv('DATA_PATH', os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'haohua'))
 questions_file = os.getenv('QUESTIONS_PATH',
                            os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                        'asset', 'haohua', 'haohua.txt'))
+                                        'asset', 'haohua.txt'))
 bot = Bot(token=token)
 
 questions_list = []
